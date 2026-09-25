@@ -1,0 +1,210 @@
+You are helping me complete a frontend coding assessment.
+IMPORTANT ASSESSMENT RULES:
+- AI tools are explicitly allowed and encouraged.
+- Backend integration is NOT required.
+- Mock/static data is acceptable.
+- The final implementation must be my own work and I must be able to understand and explain the code.
+- The assessment has a 4-hour time limit.
+- The evaluator requires:
+A live deployed URL accessible without running the project locally.
+A GitHub repository URL.
+A README.md containing brief setup/run instructions.
+An `AI_PROMPT_HISTORY.txt` file containing the COMPLETE prompt history for every AI tool used for this assessment, in exact chronological order, with no rewritten, combined, summarized, or omitted prompts.
+- Do NOT include prompts from unrelated projects in `AI_PROMPT_HISTORY.txt`.
+- Do not fabricate AI prompt history. I will maintain the exact prompt history separately.
+PROJECT:
+Build Task 1 — Order Tracking Screen for an e-commerce application.
+TASK REQUIREMENT:
+The current application only displays:
+- Processing
+- Shipped
+- Out for Delivery
+- Delivered
+Users report that the current status is difficult to understand.
+Redesign and implement a modern, professional mobile Order Tracking experience where delivery status is immediately understandable.
+CORE REQUIREMENTS:
+Clear delivery progress/timeline
+- Create a visually clear order progress timeline.
+- Show completed, current, and upcoming stages distinctly.
+- Use meaningful icons and visual hierarchy.
+- The user should understand the order's journey without reading large amounts of text.
+- Include useful status descriptions/events rather than relying only on labels.
+Current order status
+- Clearly highlight the current state.
+- Explain what is happening right now.
+- Include contextual information such as the latest tracking update.
+Estimated delivery date/time
+- Display an estimated delivery date/time prominently when available.
+- Make the information easy to scan.
+- For delayed orders, clearly explain that the original estimate has passed.
+Order/product summary
+Include a compact but polished order summary containing realistic mock data such as:
+- Product image
+- Product name
+- Quantity
+- Price
+- Order ID
+- Relevant delivery information
+Contact support
+- Provide a clear and accessible way to contact support.
+- The interaction should feel intentional rather than decorative.
+- It can use mock interactions such as opening a support modal, showing support options, or displaying a support contact action.
+Loading / empty / error states
+The application should have appropriate UI states where relevant.
+Do not make these states look like broken or unfinished screens.
+Responsive mobile design
+Primary target:
+- approximately 360px–430px mobile widths.
+The UI should remain polished and usable across this range.
+Meaningful interactions
+Implement realistic interactions such as:
+- View order details
+- Contact support
+- Report a delivery issue
+- Expand/collapse tracking information
+- Switch between the required order states if useful for demonstrating the design
+MAIN REQUIREMENT — THREE ORDER STATES:
+The SAME product experience must adapt to all three situations below.
+STATE A — DELAYED ORDER
+The estimated delivery time has passed or the order is significantly delayed.
+Requirements:
+- Clearly communicate that the order is delayed.
+- Explain the situation in a calm and user-friendly way.
+- Show the last known tracking update.
+- Show the original estimated delivery date/time.
+- If appropriate, provide an updated estimate.
+- Provide an appropriate next step such as contacting support or reporting the delay.
+- Do not simply change the status label to "Delayed"; redesign the relevant UI context so the user understands what happened.
+STATE B — DELIVERED BUT NOT RECEIVED
+The system says the order was delivered, but the customer reports they did not receive it.
+Requirements:
+- Clearly show that the carrier/system marks the order as delivered.
+- Clearly distinguish this from the customer's reported problem.
+- Provide an appropriate next step.
+- Include an obvious "Report an issue" / "I didn't receive this order" interaction.
+- Provide useful guidance such as checking the delivery location, household members, reception/security, etc., if appropriate.
+- Provide a support escalation/action.
+- Avoid making the customer feel that the issue is simply closed because the system says "Delivered."
+STATE C — TRACKING NOT AVAILABLE YET
+The order exists, but tracking information is not available yet.
+Requirements:
+- Do NOT show a broken or empty screen.
+- Explain that the order has been received/processed but tracking information is not available yet.
+- Show useful order information.
+- Provide an expected timeframe for tracking availability if appropriate.
+- Provide a way to refresh/check tracking.
+- Provide support as an alternative if the tracking does not become available.
+- The screen should still feel complete and intentional.
+DESIGN DIRECTION:
+Create a professional modern e-commerce experience.
+Prioritize:
+- Excellent visual hierarchy
+- Clear status communication
+- Appropriate whitespace
+- Strong typography
+- Accessible contrast
+- Consistent border radius
+- Subtle shadows/borders where appropriate
+- Meaningful iconography
+- Mobile-first layout
+- High-quality empty/error/delayed states
+- Clear primary and secondary actions
+- Avoid excessive decoration
+- Avoid generic dashboard-style design
+The design should look like a real production e-commerce application rather than a coding-demo page.
+TECHNICAL PREFERENCES:
+Use a modern frontend stack. Prefer:
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- A reasonable icon library such as Lucide
+- Component-based architecture
+However, choose the simplest reliable setup that can be completed within the assessment time.
+No backend is required.
+Use mock/static data.
+ARCHITECTURE:
+Please structure the project cleanly.
+For example, separate:
+- Page/screen
+- Order tracking components
+- Timeline/progress components
+- Product summary
+- Status-specific components
+- Support/report issue interactions
+- Mock order data
+- Reusable UI components
+Avoid putting the entire application into one huge component.
+STATE DEMONSTRATION:
+The evaluator must be able to easily see all three required states.
+Implement a simple state selector/demo mechanism if appropriate, for example:
+- Delayed
+- Delivered but Not Received
+- Tracking Not Available
+This should be designed professionally and should not make the actual product screen feel like a developer test panel.
+The default screen should show one polished state.
+Make it obvious how the evaluator can inspect the other two states.
+INTERACTION DETAILS:
+Implement functional frontend interactions wherever practical.
+Examples:
+- "View order details" opens/expands additional information.
+- "Contact support" opens a support modal/sheet or appropriate support UI.
+- "Report an issue" opens an issue-report flow.
+- "Refresh tracking" provides a realistic loading state before updating/re-rendering.
+- Timeline items can reveal additional tracking details if appropriate.
+Do not create fake backend behavior that pretends to contact a real company. Clearly treat these as frontend/mock interactions.
+ACCESSIBILITY:
+Ensure:
+- Buttons are clearly identifiable.
+- Interactive elements are keyboard accessible where applicable.
+- Icons should not be the only way to understand an action.
+- Use appropriate semantic HTML.
+- Provide accessible labels for icon-only buttons.
+- Maintain readable text at mobile sizes.
+VISUAL QUALITY:
+Before considering the task complete, review the implementation as if you were a senior frontend reviewer.
+Check:
+- 360px width
+- 375px width
+- 390px width
+- 430px width
+- Long product names
+- Long tracking messages
+- Different status states
+- Loading state
+- Error/issue state
+- Modal/sheet behavior
+- No horizontal overflow
+- No overlapping content
+- No broken images
+- No console errors
+- No obvious placeholder/demo text
+DEPLOYMENT:
+Prepare the project for deployment.
+The final project must be deployable to a public URL without requiring the evaluator to run it locally.
+Prefer Vercel if using Next.js.
+README.md must include:
+- Project description
+- Tech stack
+- Installation
+- Development command
+- Build command if relevant
+- Deployment information
+- How to view the three order states
+IMPORTANT:
+Do not stop after creating the basic UI.
+First inspect the project structure and requirements, then implement the complete experience, then test/review it, fix visual and responsive issues, and finally prepare it for deployment/submission.
+If you have access to browser/preview tools, use them to inspect the actual rendered UI at mobile widths and make corrections based on the rendered result.
+Do not add unnecessary backend infrastructure.
+Do not add unnecessary dependencies.
+Do not use copyrighted assets that create licensing concerns. Use appropriate free assets, generated placeholders, CSS shapes, or reliable public image sources where necessary.
+FINAL QUALITY BAR:
+The result should look like a polished real-world e-commerce order-tracking feature that demonstrates strong frontend skills, UX thinking, responsive design, component architecture, and attention to edge cases.
+Before finishing, provide:
+Summary of what was implemented.
+Project structure explanation.
+How the three required states are demonstrated.
+How to run the project locally.
+Deployment steps/status.
+Any important implementation decisions I should understand so I can explain the project during evaluation.
+Do not claim something is deployed unless it has actually been successfully deployed and verified.
