@@ -8,7 +8,7 @@ Designed to replace ambiguous, 4-stage tracking screens with an immediately unde
 
 ## 🚀 Live Demo & Repository
 - **GitHub Repository**: [https://github.com/Khandaker20201125010/order-tracking](https://github.com/Khandaker20201125010/order-tracking)
-- **Live Deployment URL**: Deployable with one click to Vercel (see Deployment section below).
+- **Live Deployment URL**: [Deployable with one click to Vercel](https://order-tracking-phi.vercel.app/) .
 
 ---
 
